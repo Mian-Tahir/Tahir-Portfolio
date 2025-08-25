@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-text-primary font-sans;
+  overflow-x: hidden;
+}
+
+@layer components {
+  .container {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-8 relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-1/2 h-1 bg-primary rounded-full;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center justify-center;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-hover;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-transparent border-2 border-primary text-white hover:bg-primary/10;
+  }
+  
+  .card {
+    @apply bg-background-lighter rounded-lg p-6 shadow-card transition-all duration-300 hover:shadow-card-hover;
+  }
+  
+  .input {
+    @apply w-full bg-background-light text-text-primary border border-gray-700 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300;
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
