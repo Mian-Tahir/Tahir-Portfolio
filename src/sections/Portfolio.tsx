@@ -27,7 +27,7 @@ const projects: Project[] = [
     image: '/portfolio website.PNG',
     category: ['frontend'],
     technologies: ['React', "TypeScript", 'Tailwind CSS', 'Framer Motion', 'React-Scroll'],
-    liveUrl: 'https://example.com',
+    liveUrl: 'https://tahir-portfolio-red.vercel.app/',
     githubUrl: 'https://github.com',
   },
   {
