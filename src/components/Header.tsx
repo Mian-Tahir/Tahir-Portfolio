@@ -32,18 +32,27 @@ const Header: React.FC = () => {
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="pointer-events-auto rounded-3xl bg-background/95 backdrop-blur-md shadow-xl px-4 py-3 sm:px-6 sm:py-5 mx-auto max-w-sm sm:max-w-2xl md:max-w-7xl flex items-center justify-between border-2 border-primary/40"
+        className="pointer-events-auto rounded-3xl bg-background/95 background-transparent backdrop-blur-md shadow-xl px-4 py-3 sm:px-6 sm:py-5 mx-auto max-w-sm sm:max-w-2xl md:max-w-7xl flex items-center justify-between border-2 border-primary/40"
       >
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-lg sm:text-xl md:text-2xl  cursor-pointer font-bold text-white flex items-center mr-2 sm:mr-4"
+        <ScrollLink
+          to="hero"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={500}
+          className="text-lg sm:text-xl md:text-2xl cursor-pointer font-bold text-white flex items-center mr-2 sm:mr-4"
         >
-          <span className="text-primary mr-1">&lt;</span>
-          Tahir Mehmood
-          <span className="text-primary">/&gt;</span>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex items-center"
+          >
+            <span className="text-primary mr-1">&lt;</span>
+            Tahir Mehmood
+            <span className="text-primary">/&gt;</span>
+          </motion.div>
+        </ScrollLink>
 
         {/* Desktop Navigation */}
         <motion.nav
@@ -90,7 +99,7 @@ const Header: React.FC = () => {
         className="md:hidden overflow-hidden"
         style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
       >
-        <div className="rounded-2xl bg-white/60 mx-auto max-w-sm sm:bg-background-lighter shadow-lg px-3 py-3 sm:px-6 sm:py-4 mt-2 sm:max-w-2xl md:max-w-7xl">
+        <div className="rounded-2xl bg-background mx-auto max-w-sm sm:bg-background-lighter shadow-lg px-3 py-3 sm:px-6 sm:py-4 mt-2 sm:max-w-2xl md:max-w-7xl">
           {navLinks.map((link) => (
             <ScrollLink
               key={link.name}

@@ -100,6 +100,29 @@ const projects: Project[] = [
     liveUrl: 'https://dash-180.vercel.app/',
     githubUrl: 'https://github.com',
   },
+  {
+    id: 7,
+    title: 'NOLMT.AI',
+    description: 'NOLMT.AI is an advanced AI-driven call automation platform built with a full-stack architecture. It allows businesses to create workspaces, manage batches, upload contact lists, and run automated outbound AI calls. The system features secure authentication, real-time call processing, and intelligent voice interactions powered by ElevenLabs and custom agents. The platform includes a modern dashboard with React, Node.js, Supabase, and AWS S3, offering a seamless, scalable, and high-performance user experience.',
+    image: 'nolmtai.png',
+    category: ['frontend', 'backend', 'AI', 'full-stack'],
+    technologies: ['React', 'EmailJS', 'Tailwind CSS', 'TypeScript', 'Node.js', 'Express.js', 'Supabase', 'JWT', 's3 bucket', 'stripe'],
+    liveUrl: 'https://nolmt.ai/',
+    githubUrl: 'https://github.com',
+  },
+  {
+    id: 8,
+    title: 'Minibyte.Ai',
+    description: 'MiniByte.AI is a high-performance, fully responsive landing page designed to work seamlessly across all screen sizes. It showcases a deep-tech engineering company specializing in Autonomous Systems, Enterprise AI Platforms, and Synthetic Environment Generation. Built with React, TypeScript, Tailwind CSS, GSAP, Framer Motion, and React-Scroll, the site delivers smooth scroll animations, dynamic text transitions, and an immersive storytelling experience. It highlights MiniByte’s technical domains—from multi-modal perception systems and distributed edge intelligence to simulation-driven synthetic data generation—while reflecting the company’s first-principles engineering philosophy, end-to-end system ownership, and technical partnerships with enterprise R&D teams, startups, industrial companies, and government agencies.',
+    image: 'minibyteai.png',
+    category: ['frontend'],
+    technologies: ['React', 'framer', 'Tailwind CSS', 'TypeScript', 'gsap', 'react-scroll'],
+    liveUrl: 'https://www.minibyte.ai/',
+    githubUrl: 'https://github.com',
+  },
+  
+  
+  
 ];
 
 type CategoryFilter = 'all' | 'full-stack' | 'frontend' | 'backend';
