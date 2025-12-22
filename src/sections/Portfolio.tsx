@@ -120,6 +120,42 @@ const projects: Project[] = [
     liveUrl: 'https://www.minibyte.ai/',
     githubUrl: 'https://github.com',
   },
+  {
+    id: 9,
+    title: 'Accelerate',
+    description:
+      'Accelerate is an AI-powered coaching interface that lets users chat or speak directly with a virtual version of coach Michael McIntyre about resilience, goals, and mindset. The experience is built as a focused, single-page coaching console with two primary modes—text chat and live voice calls—surfaced through a clean tabbed UI, animated status indicators, and responsive gradients that feel modern and calming. Under the hood, it integrates tightly with ElevenLabs for real-time conversational AI, microphone/device detection, and robust error handling, so the app can gracefully manage permissions, connection issues, and reconnections while preserving session context.',
+    image: 'accelerate.png',
+    category: ['frontend', 'backend','full-stack','AI'],
+    technologies: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'ElevenLabs',
+      'lucide-react',
+      'WebSocket-ready architecture'
+    ],
+    liveUrl: 'https://accelerate-now.com/',
+    githubUrl: 'https://github.com', // replace with your repo
+  },
+  {
+    id: 9,
+    title: 'AllThreads.ai',
+    description:
+      'AllThreads.ai is a multi-agent outreach platform that turns a single prompt into fully compliant, on-brand campaigns across email, LinkedIn, and phone. It helps sales teams orchestrate personalized multi-channel sequences in minutes instead of weeks, while giving revenue and ops leaders enterprise-grade governance, cost control, and full auditability. The product is designed for teams that want to scale AI-driven outreach without losing control over messaging, approvals, and compliance.',
+    image: '/allthreadsai.png', // update to your actual image filename
+    category: ['frontend'],
+    technologies: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'Framer Motion',
+      'EmailJS',
+      'context api'
+    ],
+    liveUrl: 'https://allthreads.ai/',      // put your real URL here
+    githubUrl: 'https://github.com'        // replace with this repo’s URL
+  }
   
   
   
