@@ -133,7 +133,13 @@ const projects: Project[] = [
       'Tailwind CSS',
       'ElevenLabs',
       'lucide-react',
-      'WebSocket-ready architecture'
+      'WebSocket-ready architecture',
+      'node.js',
+      'express.js',
+      'elevenlabs',
+      
+   
+ 
     ],
     liveUrl: 'https://accelerate-now.com/',
     githubUrl: 'https://github.com', // replace with your repo
