@@ -124,8 +124,8 @@ const projects: Project[] = [
     id: 9,
     title: 'Accelerate',
     description:
-      'Accelerate is an AI-powered coaching interface that lets users chat or speak directly with a virtual version of coach Michael McIntyre about resilience, goals, and mindset. The experience is built as a focused, single-page coaching console with two primary modes—text chat and live voice calls—surfaced through a clean tabbed UI, animated status indicators, and responsive gradients that feel modern and calming. Under the hood, it integrates tightly with ElevenLabs for real-time conversational AI, microphone/device detection, and robust error handling, so the app can gracefully manage permissions, connection issues, and reconnections while preserving session context.',
-    image: 'accelerate.png',
+    'Accelerate is an AI-powered coaching platform that gives users direct access to personalized coaching conversations with an AI version of coach Michael McIntyre. Users can explore resilience, goal-setting, and mindset through real-time text chat or live voice calls, getting immediate, thoughtful responses tailored to their questions. The platform makes professional coaching insights accessible anytime, helping users reflect on challenges, clarify objectives, and develop strategies for personal growth—all through an intuitive, conversation-driven interface that feels natural and supportive.',
+  image: 'accelerate.png',
     category: ['frontend', 'backend','full-stack','AI'],
     technologies: [
       'React',
