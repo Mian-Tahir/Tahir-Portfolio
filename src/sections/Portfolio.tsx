@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import AnimatedSection from '../components/AnimatedSection';
 import SectionTitle from '../components/SectionTitle';
-import { ExternalLink, Github, X } from 'lucide-react';
+import { ExternalLink, X } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -16,20 +16,9 @@ interface Project {
   category: string[];
   technologies: string[];
   liveUrl: string;
-  githubUrl: string;
 }
 
 const projects: Project[] = [
-  {
-    id: 1,
-    title: 'Portfolio Website',
-    description: 'A responsive and dynamic portfolio website built with React and TypeScript, featuring smooth animations, interactive project showcases, and optimized UI/UX design using Tailwind CSS and Framer Motion.',
-    image: '/portfolio website.PNG',
-    category: ['frontend'],
-    technologies: ['React', "TypeScript", 'Tailwind CSS', 'Framer Motion', 'React-Scroll'],
-    liveUrl: 'https://tahir-portfolio-red.vercel.app/',
-    githubUrl: 'https://github.com',
-  },
   {
     id: 2,
     title: 'Annotation Tool (ANNA)',
@@ -50,13 +39,12 @@ const projects: Project[] = [
       'Mask R-CNN'
     ],
     liveUrl: 'https://amatdt.aethero.com/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 3,
     title: 'Chatley.AI',
     description: 'A 24/7 AI-powered voice assistant that handles business calls at scale, reducing operational costs by up to 40% with consistent, high-quality conversations.',
-    image: 'chatley ai project.PNG',
+    image: 'chatley.ai.png',
     category: ['full-stack', 'backend', 'frontend', 'AI'],
     technologies: [
       'React', 
@@ -68,7 +56,6 @@ const projects: Project[] = [
       'VAPI.ai'
     ],
     liveUrl: 'https://www.chatley.ai/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 4,
@@ -78,7 +65,6 @@ const projects: Project[] = [
     category: ['frontend', 'backend'],
     technologies: ['React', 'Tailwind CSS', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'google-map-react', 'EmailJS'],
     liveUrl: 'https://jameelakhtarprojects.com/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 5,
@@ -88,7 +74,6 @@ const projects: Project[] = [
     category: ['frontend'],
     technologies: ['React', 'JavaScript', 'Tailwind CSS', 'React Icons', 'Styled Components'],
     liveUrl: 'https://travel-website-delta-lovat.vercel.app/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 6,
@@ -98,34 +83,54 @@ const projects: Project[] = [
     category: ['frontend'],
     technologies: ['React', 'EmailJS', 'Tailwind CSS', 'TypeScript'],
     liveUrl: 'https://dash-180.vercel.app/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 7,
-    title: 'NOLMT.AI',
-    description: 'NOLMT.AI is an advanced AI-driven call automation platform built with a full-stack architecture. It allows businesses to create workspaces, manage batches, upload contact lists, and run automated outbound AI calls. The system features secure authentication, real-time call processing, and intelligent voice interactions powered by ElevenLabs and custom agents. The platform includes a modern dashboard with React, Node.js, Supabase, and AWS S3, offering a seamless, scalable, and high-performance user experience.',
+    title: 'NOLMT.ai',
+    description: 'NOLMT.ai is a full-stack generative AI SaaS for Text-to-Image, Image-to-Image, Text-to-Video, and Image-to-Video creation, powered by a granular credit system. It includes secure auth (email + Google), Stripe subscriptions/top-ups, S3 storage with signed downloads, a user dashboard, and an admin portal for analytics and plan/pricing management.',
     image: 'nolmtai.png',
     category: ['frontend', 'backend', 'AI', 'full-stack'],
-    technologies: ['React', 'EmailJS', 'Tailwind CSS', 'TypeScript', 'Node.js', 'Express.js', 'Supabase', 'JWT', 's3 bucket', 'stripe'],
+    technologies: [
+      'Wavespeed AI',
+      'React',
+      'TypeScript',
+      'Vite',
+      'TailwindCSS',
+      'React Router',
+      'React Hot Toast',
+      'Recharts',
+      'Lucide React',
+      'Node.js',
+      'Express',
+      'Supabase',
+      'MongoDB',
+      'Mongoose',
+      'Stripe',
+      'AWS S3 (AWS SDK v3)',
+      'JWT',
+      'Passport (local & Google OAuth20)',
+      'Nodemailer',
+      'Twilio',
+      'Express Rate Limit',
+      'Node-Cron'
+    ],
     liveUrl: 'https://nolmt.ai/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 8,
     title: 'Minibyte.Ai',
     description: 'MiniByte.AI is a high-performance, fully responsive landing page designed to work seamlessly across all screen sizes. It showcases a deep-tech engineering company specializing in Autonomous Systems, Enterprise AI Platforms, and Synthetic Environment Generation. Built with React, TypeScript, Tailwind CSS, GSAP, Framer Motion, and React-Scroll, the site delivers smooth scroll animations, dynamic text transitions, and an immersive storytelling experience. It highlights MiniByte’s technical domains—from multi-modal perception systems and distributed edge intelligence to simulation-driven synthetic data generation—while reflecting the company’s first-principles engineering philosophy, end-to-end system ownership, and technical partnerships with enterprise R&D teams, startups, industrial companies, and government agencies.',
-    image: 'minibyteai.png',
+    image: 'minibyte.ai.png',
     category: ['frontend'],
     technologies: ['React', 'framer', 'Tailwind CSS', 'TypeScript', 'gsap', 'react-scroll'],
     liveUrl: 'https://www.minibyte.ai/',
-    githubUrl: 'https://github.com',
   },
   {
     id: 9,
     title: 'Accelerate',
     description:
-    ''Accelerate is an AI-powered coaching platform that gives users direct access to personalized coaching conversations with an AI version of coach Michael McIntyre. Users can explore resilience, goal-setting, and mindset through real-time text chat or live voice calls, getting immediate, thoughtful responses tailored to their questions. The platform makes professional coaching insights accessible anytime, helping users reflect on challenges, clarify objectives, and develop strategies for personal growth—all through an intuitive, conversation-driven interface that feels natural and supportive.',
-  image: 'accelerate.png',
+      'Accelerate is an AI-powered coaching platform that gives users direct access to personalized coaching conversations with an AI version of coach Michael McIntyre. Users can explore resilience, goal-setting, and mindset through real-time text chat or live voice calls, getting immediate, thoughtful responses tailored to their questions. The platform makes professional coaching insights accessible anytime, helping users reflect on challenges, clarify objectives, and develop strategies for personal growth—all through an intuitive, conversation-driven interface that feels natural and supportive.',
+    image: 'accelerate.png',
     category: ['frontend', 'backend','full-stack','AI'],
     technologies: [
       'React',
@@ -137,15 +142,11 @@ const projects: Project[] = [
       'node.js',
       'express.js',
       'elevenlabs',
-      
-   
- 
     ],
     liveUrl: 'https://accelerate-now.com/',
-    githubUrl: 'https://github.com', // replace with your repo
   },
   {
-    id: 9,
+    id: 10,
     title: 'AllThreads.ai',
     description:
       'AllThreads.ai is a multi-agent outreach platform that turns a single prompt into fully compliant, on-brand campaigns across email, LinkedIn, and phone. It helps sales teams orchestrate personalized multi-channel sequences in minutes instead of weeks, while giving revenue and ops leaders enterprise-grade governance, cost control, and full auditability. The product is designed for teams that want to scale AI-driven outreach without losing control over messaging, approvals, and compliance.',
@@ -160,7 +161,6 @@ const projects: Project[] = [
       'context api'
     ],
     liveUrl: 'https://allthreads.ai/',      // put your real URL here
-    githubUrl: 'https://github.com'        // replace with this repo’s URL
   }
   
   
@@ -170,7 +170,7 @@ const projects: Project[] = [
 type CategoryFilter = 'all' | 'full-stack' | 'frontend' | 'backend';
 
 const Portfolio: React.FC = () => {
-  const [ref, inView] = useInView({
+  useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
@@ -255,7 +255,7 @@ const Portfolio: React.FC = () => {
       );
 
       // Add hover animations for cards
-      cardRefs.current.forEach((card, index) => {
+      cardRefs.current.forEach((card) => {
         if (!card) return;
 
         const handleMouseEnter = (): void => {
