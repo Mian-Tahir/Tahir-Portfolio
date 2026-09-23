@@ -252,12 +252,11 @@ const Hero: React.FC = () => {
                 />
               </h2>
               <p ref={descriptionRef} className="text-text-secondary max-w-xl mt-4">
-               I like building things from the ground up—taking an idea, figuring out how it should work, and turning it into a product that feels simple to use.
+                 I like building things from the ground up—taking an idea, figuring out how it should work, and turning it into a product that feels simple to use.
 
-Over the past 2.5+ years, I’ve worked across the full stack, building web applications and AI-powered products with React.js, Next.js, TypeScript, Node.js, and modern databases.
+  Over the past 3+ years, I’ve shipped production-grade SaaS platforms end to end with React.js, Next.js, TypeScript, and Node.js—designing scalable APIs, integrating AI voice agents and RAG-based knowledge systems, and building secure authentication and billing that real users depend on.
 
-For me, good software isn’t just about making features work. It’s about solving the right problem, keeping the code maintainable, and creating an experience that makes the complexity feel invisible.
-
+  Good software isn’t just features that work—it’s the judgment behind what to build, what to leave out, and how to keep a system easy to change six months from now.
               </p>
             </div>
 
